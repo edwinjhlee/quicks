@@ -5,10 +5,14 @@
 # bash -c "source /c/ellib.sh; monitor_restart"
 
 monitor_restart(){
+  dingding "monitor_restart()"
   while true; do 
     sleep 1s; 
     if redis-cli get restart | grep -q 1; then 
-      redis-cli set restart 0; echo restart; exit; 
+      redis-cli set restart 0; 
+      dingding "Ready to restart"
+      echo restart; 
+      exit; 
     else 
       echo not; 
     fi;
