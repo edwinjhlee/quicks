@@ -8,12 +8,12 @@ monitor_restart(){
   dingding "monitor_restart()"
   while true; do 
     sleep 1s; 
-    if redis-cli get restart | grep -q 1; then 
+    if timeout 3 redis-cli get restart | grep -q 1; then 
       redis-cli set restart 0; 
       dingding "Ready to restart"
-      echo restart; 
+      shutdown -r -t 0
       exit; 
-    else 
+    else
       echo not; 
     fi;
   done
