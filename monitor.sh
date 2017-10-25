@@ -11,8 +11,8 @@ monitor_restart(){
     if timeout 3 redis-cli get restart | grep -q 1; then 
       redis-cli set restart 0; 
       dingding "Ready to restart"
-      shutdown -r -t 0
-      exit; 
+      shutdown /r /t 0
+      exit;
     else
       echo not; 
     fi;
