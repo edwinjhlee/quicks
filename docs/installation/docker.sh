@@ -8,3 +8,5 @@ sudo add-apt-repository "deb [arch=amd64] http://mirrors.aliyun.com/docker-ce/li
 # Step 4: 更新并安装 Docker-CE
 sudo apt-get -y update
 sudo apt-get -y install docker-ce
+
+sudo curl -L https://github.com/docker/compose/releases/download/1.17.0/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
