@@ -1,8 +1,8 @@
 #! /bin/bash
 
-apt-get install texlive-base
-apt-get install biblatex
-apt-get install texlive-fonts-recommended
+apt-get install texlive-base -y
+apt-get install biblatex -y
+apt-get install texlive-fonts-recommended -y
 
-apt-get install texlive-fonts-extra
-apt-get install texlive-science
+apt-get install texlive-fonts-extra -y
+apt-get install texlive-science -y
